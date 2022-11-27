@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #d6a8e4, #350c5c);
+}
+.card{
+    width: 300px;
+    height: 400px;
+    background-color: #272d40;
+    padding: 20px;
+    color: white;
+    margin: 120px auto;
+    border-radius: 10px;
+    text-align: center;
+}
+.card:hover .card__product-img {
+    transform: translateY(-90px) rotate(-20deg);
+}
+.card:hover .card__title {
+    transform: translate(-43px, -61px);
+}
+.card:hover .card__price {
+    transform: translate(-110px, -61px);
+}
+.card__navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation__icon{
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.card__product-img{
+    width: 90%;
+    object-fit: cover;
+    padding-right: 20px;
+    transition: transform 0.5s;
+}
+.card__title{
+    color: #4daf54;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 6px 0;
+    transition: transform 0.5s;
+}
+.card__price{
+    font-size: 22px;
+    font-weight: 500;
+    transition: transform 0.5s;
+}
+.card:hover .card__bottom {
+    margin-top: -8px;
+    opacity: 1;
+    visibility: visible;
+}
+.card__bottom{
+    margin-top: 150px;
+    opacity: 0;
+    transition: all 0.5s;
+    transition-delay: 0.2s;
+    visibility: hidden;
+}
+.card__bottom-size{
+    display: flex;
+    align-items: center;
+}
+.card__bottom-color-title,
+.card__bottom-color-item {
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 6px;
+}
+.card__bottom-size span {
+    padding: 3px 10px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.card__bottom-color{
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+}
+.card__bottom-color-item{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.card__bottom-color--green{
+    background-color: green;
+}
+.card__bottom-color--red{
+    background-color: red;
+}
+.card__bottom-color--black{
+    background-color: black;
+}
+.card__bottom-action{
+    display: flex;
+    align-items: center;
+}
+.card__bottom-action-btn{
+    border: none;
+    outline: none;
+    background: #4daf54;
+    margin-right: 10px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    transition: transform 0.25s;
+    cursor: pointer;
+}
+.card__bottom-action-btn:hover {
+    transform: scale(0.9);
+}

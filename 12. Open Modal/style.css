@@ -1,0 +1,107 @@
+:root {
+    --primary-color: pink;
+    --text-color: white;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(200, 172, 226);
+}
+.modal-open-btn{
+    position: fixed;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px 20px ;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+.modal-open-btn:hover {
+    background-color: rgba(200, 172, 226, 0.8);
+}
+.modal.hide {
+    display: none;
+}
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes showModal {
+    from {
+        opacity: 0;
+        top: -300px;
+    } to {
+        opacity: 1;
+        top: 0;
+    }
+}
+.modal__inner{
+    position: relative;
+    width: 450px;
+    background-color: var(--text-color);
+    border-radius: 14px;
+    overflow: hidden;
+    animation: showModal 0.7s;
+}
+.modal__inner-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 14px;
+}
+.modal__inner-header > p {
+    font-size: 16px;
+    font-weight: 300;
+}
+.modal__inner-header-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+.modal__inner-body{
+    padding: 14px;
+}
+.modal__inner-body > h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+.modal__inner-body > p {
+    font-size: 16px;
+    font-weight: 300;
+}
+.modal__inner-footer{
+    padding: 14px;
+    text-align: right;
+}
+.modal__inner-footer-btn{
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
